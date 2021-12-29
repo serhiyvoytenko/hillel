@@ -1,0 +1,16 @@
+{
+    "name": "root/task",
+    "type": "hillel-project",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Serhii Voytenko",
+            "email": "serhiy.voytenko@dn.pebs.biz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+      "psr-4": { "App\\": "/" }
+      }
+}
