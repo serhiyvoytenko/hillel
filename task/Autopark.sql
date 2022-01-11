@@ -1,5 +1,5 @@
 CREATE DATABASE `hillel_db`;
-USE hillel_db;
+USE `hillel_db`;
 
 CREATE TABLE `parks`
 (
