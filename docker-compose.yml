@@ -20,7 +20,8 @@ services:
     depends_on:
       - app
   db:
-    image: mysql:8.0.23
+  #  image: mysql:8.0.23
+    image: mariadb:latest
     ports:
       - 3306:3306
     restart: unless-stopped
