@@ -89,4 +89,3 @@ class Color
         return $this;
     }
 }
-
