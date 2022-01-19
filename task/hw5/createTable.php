@@ -1,30 +1,32 @@
 <?php
 
-include_once __DIR__."/config.php";
+include_once __DIR__ . "/config.php";
 
-$dsn = "mysql:dbname=".DB_NAME.";host=".DB_HOST;
+$dsn = "mysql:dbname=" . DB_NAME . ";host=" . DB_HOST;
 
-$opt = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
+$command = 'CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY,
+            name VARCHAR (255) NOT NULL,
+            surname VARCHAR (255) NOT NULL,
+            age INT, 
+            email VARCHAR (100) NOT NULL UNIQUE, 
+            phone VARCHAR (12) UNIQUE   
+            )';
 
+$dbh = new PDO($dsn, DB_USER, DB_PWD);
 
-$dbh = new PDO($dsn, DB_USER, DB_PWD, $opt);
+$ifExistTable = $dbh->query('SHOW TABLES LIKE "users"');
 
-$stmt = $dbh->query('SELECT * FROM cars');
+if (isset($_GET['createTable']) && !$ifExistTable->fetch()) {
+    $dbh->exec($command);
 
-foreach ($stmt->fetch() as $row){
-//    var_dump($row);
-    echo $row.'<br>';
+} elseif ($ifExistTable->fetch()) {
+    echo 'Table exist!';
+
+} else {
+    echo
+    "<form action=''>
+        <input type='hidden' name='createTable' value='createTable'>
+        <button type='submit'>Create Table</button>
+        </form>";
 }
-//$str = $dbh->query();
-
-var_dump($dbh, $stmt->fetchAll());
-
-
-
-echo '<form action="" method="get">
-    <button type="submit" value="createTable">Create Table</button>
-    </form>';
