@@ -22,7 +22,7 @@ if (isset($_POST['createTable'])) {
     echo 'Table created!';
 
 } elseif ($ifExistTable->fetch()) {
-    echo 'Table exist!';
+    echo 'Table exists!';
 
 } else {
     echo

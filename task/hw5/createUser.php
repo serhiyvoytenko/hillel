@@ -11,9 +11,9 @@ $command = 'INSERT INTO
 
 $dbh = new PDO($dsn, DB_USER, DB_PWD);
 
-
 if (isset($_POST['name'])) {
-    $dbh->prepare($command);
+    $stmt = $dbh->prepare($command);
+    $stmt->execute($_POST);
 }
 
 echo <<<FORM
