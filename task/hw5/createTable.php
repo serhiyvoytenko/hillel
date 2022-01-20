@@ -17,15 +17,16 @@ $dbh = new PDO($dsn, DB_USER, DB_PWD);
 
 $ifExistTable = $dbh->query('SHOW TABLES LIKE "users"');
 
-if (isset($_GET['createTable']) && !$ifExistTable->fetch()) {
+if (isset($_POST['createTable'])) {
     $dbh->exec($command);
+    echo 'Table created!';
 
 } elseif ($ifExistTable->fetch()) {
     echo 'Table exist!';
 
 } else {
     echo
-    "<form action=''>
+    "<form action='' method='post'>
         <input type='hidden' name='createTable' value='createTable'>
         <button type='submit'>Create Table</button>
         </form>";
