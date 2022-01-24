@@ -12,6 +12,8 @@ $command = 'INSERT INTO
 $dbh = new PDO($dsn, DB_USER, DB_PWD);
 
 if (isset($_POST['name'])) {
+    $data['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+
     $stmt = $dbh->prepare($command);
     $stmt->execute($_POST);
 }
