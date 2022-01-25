@@ -17,10 +17,10 @@ if (isset($_POST['name']) &&
     filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) &&
     filter_var($_POST['phone'], FILTER_VALIDATE_INT, array("options" => array("min_range" => 380000000000, "max_range" => 380999999999))))
  {
-
     $stmt = $dbh->prepare($command);
     $stmt->execute($_POST);
     echo 'User created!<br><br>';
+
 }elseif (isset($_POST['name'])){
     echo 'Incorrect values!<br><br>';
 }
