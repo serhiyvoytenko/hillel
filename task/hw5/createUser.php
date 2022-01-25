@@ -4,10 +4,8 @@ include_once __DIR__ . "/config.php";
 
 $dsn = "mysql:dbname=" . DB_NAME . ";host=" . DB_HOST;
 
-$command = 'INSERT INTO
-    `users` (name, surname, age, email, phone)
-    VALUES
-        (:name, :surname, :age, :email, :phone)';
+$command = 'INSERT INTO `users` (name, surname, age, email, phone)
+            VALUES (:name, :surname, :age, :email, :phone)';
 $regexp = '/[a-zA-Z\s]/';
 
 $dbh = new PDO($dsn, DB_USER, DB_PWD);
