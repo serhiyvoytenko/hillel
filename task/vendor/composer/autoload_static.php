@@ -7,21 +7,32 @@ namespace Composer\Autoload;
 class ComposerStaticInitb255c144046c5ea7627c887ab464e543
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'M' => 
         array (
-            'App\\' => 4,
+            'Models\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'App\\' => 
+        'Models\\' => 
         array (
-            0 => '/',
+            0 => __DIR__ . '/../..' . '/hw6/App/Models',
         ),
     );
 
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/../..' . '/hw6',
+    );
+
     public static $classMap = array (
+        'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/Admin/DashboardController.php',
+        'App\\Http\\Controllers\\Admin\\OrdersController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/Admin/OrdersController.php',
+        'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/MainController.php',
+        'App\\Http\\Helpers\\ImageHelper' => __DIR__ . '/../..' . '/hw6/App/Http/Helpers/ImageHelper.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Models\\Order' => __DIR__ . '/../..' . '/hw6/App/Models/Order.php',
+        'Models\\Product' => __DIR__ . '/../..' . '/hw6/App/Models/Product.php',
+        'Models\\User' => __DIR__ . '/../..' . '/hw6/App/Models/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -29,6 +40,7 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb255c144046c5ea7627c887ab464e543::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb255c144046c5ea7627c887ab464e543::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitb255c144046c5ea7627c887ab464e543::$fallbackDirsPsr4;
             $loader->classMap = ComposerStaticInitb255c144046c5ea7627c887ab464e543::$classMap;
 
         }, null, ClassLoader::class);
