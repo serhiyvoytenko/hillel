@@ -1,5 +1,7 @@
 <?php
 
+namespace Http\Helpers;
+
 class ImageHelper
 {
     public function __construct()

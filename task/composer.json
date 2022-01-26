@@ -13,7 +13,7 @@
         "ext-pdo": "*"
     },
     "autoload": {
-      "psr-4": { "": "./hw6/",
-                "Models\\": "./hw6/App/Models/"}
+      "psr-4": { "": "hw6",
+                "Models\\": "hw6/App/Models"}
       }
 }
