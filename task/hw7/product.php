@@ -2,10 +2,10 @@
 
 class Product
 {
-    public function get(name) {
+    public function get($name) {
     }
 
-    public function set(name, value) {
+    public function set($name, $value) {
     }
 }
 
