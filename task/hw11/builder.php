@@ -17,14 +17,14 @@ interface ContactBuilder
 
 class Contact implements ContactBuilder
 {
-    private $contact;
+    private stdClass $contact;
 
     public function __construct()
     {
         $this->reset();
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->contact = new \stdClass();
     }
