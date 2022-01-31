@@ -1,7 +1,5 @@
 <?php
 
-use JetBrains\PhpStorm\Pure;
-
 interface GetTaxiData
 {
     public function getTaxiModel(): string;
@@ -57,7 +55,7 @@ abstract class Delivery
 
 class EconomDelivery extends Delivery
 {
-    #[Pure] public function createDelivery(): GetTaxiData
+    public function createDelivery(): GetTaxiData
     {
         return new Lada();
     }
@@ -65,7 +63,7 @@ class EconomDelivery extends Delivery
 
 class StandartDelivery extends Delivery
 {
-    #[Pure] public function createDelivery(): GetTaxiData
+    public function createDelivery(): GetTaxiData
     {
         return new Volkswagen();
     }
@@ -73,7 +71,7 @@ class StandartDelivery extends Delivery
 
 class LuxDelivery extends Delivery
 {
-    #[Pure] public function createDelivery(): GetTaxiData
+    public function createDelivery(): GetTaxiData
     {
         return new Mercedes();
     }
