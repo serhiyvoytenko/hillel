@@ -15,13 +15,13 @@ class Router
         $this->routes[$route] = $params;
     }
 
-    public function dispatch($url): void
+    public function dispatch(string $url): void
     {
         $allData = $this->checkMatch($url);
         var_dump($allData);
     }
 
-    public function checkMatch($url): array
+    public function checkMatch(string $url): array
     {
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $parts)) {
