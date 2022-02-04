@@ -2,31 +2,57 @@
 
 class Router
 {
+    private const DEFAULT_URL = [
+        '' => ['controller' => 'Home', 'action' => 'index'],
+    ];
 
-    private array $routes;
+    protected array $routes = [];
 
-    public function dispatch(string $url): void
+    public function add(string $route, array $params = []): void
     {
-        foreach ($this->routes as $key => $route) {
-            if ($url===$key){
-                var_dump($url, $route);
+        $route = $this->convertToPreg($route);
+
+        $this->routes[$route] = $params;
+    }
+
+    public function dispatch($url): void
+    {
+        $allData = $this->checkMatch($url);
+        var_dump($allData);
+    }
+
+    public function checkMatch($url): array
+    {
+        foreach ($this->routes as $route => $params) {
+            if (preg_match($route, $url)){
+                return $this->routes[$route];
             }
         }
+        return self::DEFAULT_URL;
     }
 
-    public function add(string $url, array $params): void
+    public function convertToPreg(string $route): string
     {
-        $this->routes[$url] = $params;
+        $route = preg_replace('/\//', '\\/', $route);
+
+        $route = preg_replace('/{([a-z]+)}/', '(?P<\1>[a-z-]+)', $route);
+
+        $route = preg_replace('/{([a-z]+):([^}]+)}/', '(?P<\1>\2)', $route);
+
+        return '/^'. $route .'$/i';
     }
+
 
 }
 
-$route1 = new Router();
-$route1->add('', ['controller' => 'Home', 'action' => 'index']);
-$route1->add('posts', ['controller' => 'PostsController', 'action' => 'show']);
-$route1->add('posts/{id:\d+}', ['controller' => 'PostsController', 'action' => 'show']);
-$route1->add('posts/{id:\d+}/edit', ['controller' => 'PostsController', 'action' => 'edit']);
-$route1->dispatch('posts');
+
+$route = new Router();
+$route->add('', ['controller' => 'Home', 'action' => 'index']);
+$route->add('posts', ['controller' => 'PostsController', 'action' => 'show']);
+$route->add('posts/{id:\d+}', ['controller' => 'PostsController', 'action' => 'show']);
+$route->add('posts/{id:\d+}/edit', ['controller' => 'PostsController', 'action' => 'edit']);
+//$route1->dispatch('posts');
 //$route1->dispatch('');
 
-//var_dump($route1);
+$route->dispatch('posts');
+var_dump($route);
