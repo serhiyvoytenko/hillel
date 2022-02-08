@@ -10,6 +10,7 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         'M' => 
         array (
             'Models\\' => 7,
+            'MVC\\' => 4,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/hw6/App/Models',
+        ),
+        'MVC\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/hw13',
         ),
     );
 
@@ -30,6 +35,10 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/MainController.php',
         'App\\Http\\Helpers\\ImageHelper' => __DIR__ . '/../..' . '/hw6/App/Http/Helpers/ImageHelper.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'MVC\\App\\Models\\Post' => __DIR__ . '/../..' . '/hw13/App/Models/Post.php',
+        'MVC\\App\\Models\\User' => __DIR__ . '/../..' . '/hw13/App/Models/User.php',
+        'MVC\\Core\\DB' => __DIR__ . '/../..' . '/hw13/Core/DB.php',
+        'MVC\\Core\\Models' => __DIR__ . '/../..' . '/hw13/Core/Models.php',
         'Models\\Order' => __DIR__ . '/../..' . '/hw6/App/Models/Order.php',
         'Models\\Product' => __DIR__ . '/../..' . '/hw6/App/Models/Product.php',
         'Models\\User' => __DIR__ . '/../..' . '/hw6/App/Models/User.php',

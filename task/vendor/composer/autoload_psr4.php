@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Models\\' => array($baseDir . '/hw6/App/Models'),
+    'MVC\\' => array($baseDir . '/hw13'),
     '' => array($baseDir . '/hw6'),
 );

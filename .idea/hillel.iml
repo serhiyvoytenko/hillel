@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/task/hw6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/task/hw6/App/Models" isTestSource="false" packagePrefix="Models\" />
+      <sourceFolder url="file://$MODULE_DIR$/task/hw13" isTestSource="false" packagePrefix="MVC\" />
       <excludeFolder url="file://$MODULE_DIR$/task/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
