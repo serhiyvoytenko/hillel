@@ -62,7 +62,7 @@ class Models
 
     public static function delete(int $id): bool
     {
-        $query = 'DELETE FROM ' . static::$tableName . ' WHERE id = :id';
+        $query = 'DELETE FROM ' . static::$tableName . ' WHERE `id` = :id';
 
         $stmt = DB::getConnect()?->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);

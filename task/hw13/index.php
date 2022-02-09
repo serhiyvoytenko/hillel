@@ -7,8 +7,8 @@ use MVC\App\Models\User;
 var_dump(User::getAll(), User::getOne('test@test.com', 'email'));
 
 $data = [
-    "username" => "serg55",
-    "email" => "test565@test.com",
+    "username" => "serg5671",
+    "email" => "test56671@test.com",
     "password" => "pass123",
     "first_name" => "serg2",
     "last_name" => "bbb",
@@ -17,4 +17,7 @@ $data = [
 
 
 
-var_dump(User::update($data, 2));
+//var_dump(User::update($data, 2));
+
+//User::create($data);
+User::delete(15);
