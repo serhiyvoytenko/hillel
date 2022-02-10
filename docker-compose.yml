@@ -17,6 +17,7 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/nginx/hillel.local.conf:/etc/nginx/conf.d/hillel.local.conf
+      - ./docker/nginx/login.local.conf:/etc/nginx/conf.d/login.local.conf
     depends_on:
       - app
   db:

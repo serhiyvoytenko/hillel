@@ -26,14 +26,14 @@ class Router
         $this->routes[$route] = $params;
     }
 
-    public function dispatch($url)
+    public function dispatch($url): void
     {
         $url = trim($url, '/');
         $url = $this->removeQueryStringVariables($url);
 
         if ($this->match($url)) {
             if ($_SERVER['REQUEST_METHOD'] !== $this->params['method']) {
-                throw new \Exception('HTTP Method is not a valid');
+                throw new \RuntimeException('HTTP Method is not a valid');
             }
             unset($this->params['method']);
 
@@ -57,7 +57,7 @@ class Router
 //                        $this->params
 //                    );
                 } else {
-                    throw new \Exception("Method '{$action}' doesn't exists in {$controller} not found");
+                    throw new \RuntimeException("Method '{$action}' doesn't exists in {$controller} not found");
                 }
             } else {
                 throw new \Exception("Controller class {$controller} not found");
