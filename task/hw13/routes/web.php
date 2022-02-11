@@ -12,3 +12,4 @@ $router->add('login', ['controller' => 'AuthController', 'action' => 'login', 'm
 $router->add('registration', ['controller' => 'AuthController', 'action' => 'register', 'method' => 'GET']);
 
 $router->add('user/store', ['controller' => 'UsersController', 'action' => 'store', 'method' => 'POST']);
+$router->add('auth', ['controller' => 'UsersController', 'action' => 'auth', 'method' => 'POST']);

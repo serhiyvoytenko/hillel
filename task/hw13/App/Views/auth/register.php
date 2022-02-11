@@ -7,13 +7,13 @@ MVC\Core\View::render('parts/header', ['title' => 'Create An Account']);
                 <h1 class="display-4">Create An Account</h1>
                 <form method="POST" action="/user/store">
                     <div class="form-group">
-                        <label for="nickname">Nickname</label>
+                        <label for="username">Nickname</label>
                         <input type="text"
                                class="form-control"
-                               name="nickname"
-                               id="nickname"
-                               placeholder="Nickname"
-                               value="<?php echo !empty($data['nickname']) ? $data['nickname'] : ''; ?>"
+                               name="username"
+                               id="username"
+                               placeholder="Username"
+                               value="<?php echo !empty($data['username']) ? $data['username'] : ''; ?>"
                                required
                         />
                         <?php if(!empty($nickname_error)): ?>
@@ -54,12 +54,12 @@ MVC\Core\View::render('parts/header', ['title' => 'Create An Account']);
                         <?php endif; ?>
                     </div>
                     <div class="form-group">
-                        <label for="birthdate">Birthdate</label>
+                        <label for="birthday">Birthdate</label>
                         <input type="date"
                                class="form-control"
-                               name="birthdate"
-                               id="birthdate"
-                               value="<?php echo !empty($data['birthdate']) ? $data['birthdate'] : ''; ?>"
+                               name="birthday"
+                               id="birthday"
+                               value="<?php echo !empty($data['birthday']) ? $data['birthday'] : ''; ?>"
                                required
                         />
                         <?php if(!empty($birthdate_error)): ?>

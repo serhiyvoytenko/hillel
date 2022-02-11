@@ -2,6 +2,7 @@
 
 include_once __DIR__."/../vendor/autoload.php";
 include_once __DIR__ . '/Config/constants.php';
+include_once __DIR__ . '/Config/functions.php';
 use MVC\App\Models\User;
 
 //$user = new User();

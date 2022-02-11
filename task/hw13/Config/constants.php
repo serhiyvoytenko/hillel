@@ -7,4 +7,5 @@ const DB_PASSWORD = 'hillel_pwd';
 const CONTROLLERS_NAMESPACE = 'MVC\App\Controllers\\';
 define("BASE_DIR", dirname(__DIR__));
 const ASSETS_URI = 'assets/';
+const SITE_URL = 'http://login.local:8888';
 

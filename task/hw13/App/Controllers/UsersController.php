@@ -11,11 +11,10 @@ use MVC\Core\View;
 class UsersController extends Controller
 {
 
-    public function store()
+    public function store(): void
     {
         $fields = filter_input_array(INPUT_POST, $_POST, 1);
         $validator = new UserCreateValidator();
-
         if ($validator->validate($fields) && !$validator->checkEmailOnExists($fields['email'])) {
             $user = User::create($fields);
 
@@ -28,5 +27,13 @@ class UsersController extends Controller
 
         View::render('auth/register', $this->data);
     }
+
+    public function auth(): void
+    {
+        $user = User::getOne($_POST['email'], 'email');
+        $field = filter_input_array(INPUT_POST, $_POST, 1);
+        var_dump($user, $field, $_POST);
+    }
+
 
 }
