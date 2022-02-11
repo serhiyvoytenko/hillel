@@ -16,7 +16,7 @@ use MVC\App\Models\User;
 //    "last_name" => "bbb",
 //    "birthday" => "2000-03-05",
 //];
-
+session_start();
 
 
 //var_dump(User::update($data, 2));

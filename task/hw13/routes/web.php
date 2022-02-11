@@ -13,3 +13,4 @@ $router->add('registration', ['controller' => 'AuthController', 'action' => 'reg
 
 $router->add('user/store', ['controller' => 'UsersController', 'action' => 'store', 'method' => 'POST']);
 $router->add('auth', ['controller' => 'UsersController', 'action' => 'auth', 'method' => 'POST']);
+$router->add('logout', ['controller' => 'UsersController', 'action' => 'logout', 'method' => 'GET']);
