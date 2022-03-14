@@ -12,6 +12,10 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
             'Models\\' => 7,
             'MVC\\' => 4,
         ),
+        'D' => 
+        array (
+            'DI\\' => 3,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -23,6 +27,10 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         array (
             0 => __DIR__ . '/../..' . '/hw13',
         ),
+        'DI\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/di',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -30,22 +38,7 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
     );
 
     public static $classMap = array (
-        'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/Admin/DashboardController.php',
-        'App\\Http\\Controllers\\Admin\\OrdersController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/Admin/OrdersController.php',
-        'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/hw6/App/Http/Controllers/MainController.php',
-        'App\\Http\\Helpers\\ImageHelper' => __DIR__ . '/../..' . '/hw6/App/Http/Helpers/ImageHelper.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'MVC\\App\\Controllers\\HomeController' => __DIR__ . '/../..' . '/hw13/App/Controllers/HomeController.php',
-        'MVC\\App\\Models\\Post' => __DIR__ . '/../..' . '/hw13/App/Models/Post.php',
-        'MVC\\App\\Models\\User' => __DIR__ . '/../..' . '/hw13/App/Models/User.php',
-        'MVC\\Core\\Controller' => __DIR__ . '/../..' . '/hw13/Core/Controller.php',
-        'MVC\\Core\\DB' => __DIR__ . '/../..' . '/hw13/Core/DB.php',
-        'MVC\\Core\\Models' => __DIR__ . '/../..' . '/hw13/Core/Models.php',
-        'MVC\\Core\\Router' => __DIR__ . '/../..' . '/hw13/Core/Router.php',
-        'MVC\\Core\\View' => __DIR__ . '/../..' . '/hw13/Core/View.php',
-        'Models\\Order' => __DIR__ . '/../..' . '/hw6/App/Models/Order.php',
-        'Models\\Product' => __DIR__ . '/../..' . '/hw6/App/Models/Product.php',
-        'Models\\User' => __DIR__ . '/../..' . '/hw6/App/Models/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

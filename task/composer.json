@@ -16,7 +16,8 @@
       "psr-4": {
                 "": "hw6",
                 "Models\\": "hw6/App/Models",
-                "MVC\\": "hw13"
+                "MVC\\": "hw13",
+                "DI\\": "di"
       }
       }
 }
