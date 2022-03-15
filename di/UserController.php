@@ -13,7 +13,7 @@ class UserController
         }
 
         return <<<RESPONSE
-User name: $user->username
+User name: $user->name
 RESPONSE;
 
     }
