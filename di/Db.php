@@ -8,7 +8,7 @@ class Db
 
     public function __construct()
     {
-        $this->dbh = new \PDO('mysql:host=db;dbname=hillel_db', 'hillel_user', 'hillel_pwd');
+        $this->dbh = new \PDO('mysql:host=mariadb;dbname=hillel_db', 'hillel_user', 'hillel_pwd');
     }
 
     public function query(string $sql, array $params = [], $class = \stdClass::class): array
