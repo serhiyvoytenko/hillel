@@ -10,14 +10,15 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "larapack/dd": "^1.1"
     },
     "autoload": {
       "psr-4": {
                 "": "hw6",
                 "Models\\": "hw6/App/Models",
                 "MVC\\": "hw13",
-                "DI\\": "di"
+                "DI\\": "DI"
       }
       }
 }

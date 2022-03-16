@@ -4,7 +4,13 @@ namespace DI;
 
 class UserRepository
 {
+
     private Db $db;
+
+    public function __construct(Db $db)
+    {
+        $this->db = $db;
+    }
 
     /**
      * @param Db $db
@@ -17,8 +23,7 @@ class UserRepository
 
     public function findByEmail(string $email): ?User
     {
-        $db = new Db();
-        $res = $db->query(
+        $res = $this->db->query(
             'SELECT * FROM users WHERE email=:email',
             [':email' => $email],
             User::class

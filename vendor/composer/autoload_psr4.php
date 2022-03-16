@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Models\\' => array($baseDir . '/hw6/App/Models'),
     'MVC\\' => array($baseDir . '/hw13'),
-    'DI\\' => array($baseDir . '/di'),
+    'DI\\' => array($baseDir . '/DI'),
     '' => array($baseDir . '/hw6'),
 );

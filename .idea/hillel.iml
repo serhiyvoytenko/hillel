@@ -9,7 +9,10 @@
       <sourceFolder url="file://$MODULE_DIR$/task/hw13" isTestSource="false" packagePrefix="MVC\" />
       <sourceFolder url="file://$MODULE_DIR$/task" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/task/di" isTestSource="false" packagePrefix="DI\" />
-      <sourceFolder url="file://$MODULE_DIR$/di" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw13" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hw6/App/Models" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DI" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/task/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

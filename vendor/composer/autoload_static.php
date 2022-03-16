@@ -6,7 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitb255c144046c5ea7627c887ab464e543
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '0e423a14e27410a071e5d815d3ffc856' => __DIR__ . '/..' . '/larapack/dd/src/helper.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\VarDumper\\' => 28,
+        ),
         'M' => 
         array (
             'Models\\' => 7,
@@ -19,6 +30,14 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/hw6/App/Models',
@@ -29,7 +48,7 @@ class ComposerStaticInitb255c144046c5ea7627c887ab464e543
         ),
         'DI\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/di',
+            0 => __DIR__ . '/../..' . '/DI',
         ),
     );
 
