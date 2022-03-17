@@ -30,7 +30,6 @@ class Container
     {
         $this->prepareObject($id);
         return ($this->objects[$id]) ? $this->objects[$id]() : $this->prepareObject($id); //TODO add prepareObject
-//        return ($this->objects[$id]) ? $this->objects[$id]() : null; //TODO add prepareObject
     }
 
     /**
@@ -39,14 +38,18 @@ class Container
     private function prepareObject(string $class): object
     {
         $reflectionObject = new ReflectionClass($class);
-        $constructorObject = $reflectionObject->getConstructor();
-//        var_dump($constructorObject);
+        $argumentsConstruct = $reflectionObject?->getConstructor()?->getParameters();
 
-        if (empty($constructorObject)) {
+        if (empty ($argumentsConstruct)) {
             return new $class;
         }
 
-        return new $class;
-    }
+        $args = [];
 
+        foreach ($argumentsConstruct as $arguments) {
+            $args[$arguments->getName()] = $this->get($arguments->getType()?->getName());
+        }
+//print_r($args);
+        return new $class(...$args);
+    }
 }

@@ -11,7 +11,7 @@ try {
 
 //    dd($controller);
 //    var_dump(UserController::class);
-    echo $controller->handle();
+    echo "<br>".$controller->handle();
 } catch (Throwable $exception) {
     echo 'Error: ' . $exception->getMessage();
 }
