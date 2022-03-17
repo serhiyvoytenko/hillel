@@ -7,9 +7,10 @@ require "../vendor/autoload.php";
 
 try {
     $controller = (new Container())->get(UserController::class);
+//    $controller = (new Container())->get(\DI\Db::class);
 
 //    dd($controller);
-//    var_dump($controller);
+//    var_dump(UserController::class);
     echo $controller->handle();
 } catch (Throwable $exception) {
     echo 'Error: ' . $exception->getMessage();
